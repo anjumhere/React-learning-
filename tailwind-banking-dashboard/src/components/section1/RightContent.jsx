@@ -45,7 +45,7 @@ const RightContent = () => {
               {card.p}
             </p>
             <button
-              className={`absolute ${card.color} rounded-[3rem] bottom-5 md:bottom-10 left-1/2 -translate-x-1/2 md:left-14 md:translate-x-0 px-6 md:px-10 py-3 md:py-4 text-white text-sm md:text-base`}
+              className={`absolute ${card.color} rounded-[3rem] bottom-5 md:bottom-10 left-1/2 -translate-x-1/2 md:left-14 md:translate-x-0 px-4 md:px-7 opacity-80 py-2 md:py-2 text-white text-sm md:text-base`}
             >
               {card.b}
             </button>

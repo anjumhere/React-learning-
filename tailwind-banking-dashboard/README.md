@@ -1,16 +1,116 @@
-# React + Vite
+# 🏦 Prospective Customer Segmentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern front-end UI project built with **React** and **Tailwind CSS**, showcasing a customer segmentation dashboard for a digital banking system.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 What I Built
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A clean, modern landing page consisting of:
 
-## Expanding the ESLint configuration
+- 🔹 A **Navbar** with a branded button and title
+- 🔹 A **Left Content** section with a heading, description, and icon
+- 🔹 A **Right Content** section with 3 dynamic image cards, each representing a customer segment with a label and a color-coded button
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🗂️ Project Structure
+
+```
+tailwind-project/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── section1/
+│   │   │   ├── NavBar.jsx
+│   │   │   ├── CenterContent.jsx
+│   │   │   ├── LeftContent.jsx
+│   │   │   ├── RightContent.jsx
+│   │   │   └── Section1.jsx
+│   │   └── section2/
+│   │       └── Section2.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🧠 What I Learned
+
+### ⚛️ React
+
+| Concept | Description |
+|---|---|
+| Component breakdown | Split UI into `NavBar`, `LeftContent`, `RightContent`, `CenterContent` |
+| Arrays of objects | Store card data cleanly instead of hardcoding repeated JSX |
+| `.map()` | Dynamically render components from data |
+| `=> ()` vs `=> {}` | Implicit vs explicit return in arrow functions |
+| Dynamic JSX | Pass data into JSX using `{}` syntax |
+| `key` prop | Why React needs unique keys in lists |
+| Template literals | Apply dynamic Tailwind classes using `` `${card.color}` `` |
+
+### 🎨 Tailwind CSS
+
+| Concept | Classes Used |
+|---|---|
+| Flexbox layout | `flex` `flex-col` `gap` `justify-between` `items-center` |
+| Sizing | `w-full` `h-full` `w-[35%]` `w-3/5` |
+| Rounded corners | `rounded-[4rem]` `rounded-full` |
+| Positioning | `relative` `absolute` `inset-0` `top-` `left-` `bottom-` |
+| Centering | `left-1/2 -translate-x-1/2` |
+| Image clipping | `overflow-hidden` |
+| Dark overlay | `absolute inset-0 bg-black/60` |
+| Z-index layering | `z-10` `z-30` |
+| Object fit | `object-cover` |
+| Google Fonts | `@import` in CSS + `@theme` in Tailwind v4 |
+| Arbitrary values | `w-[35%]` `rounded-[4rem]` `bg-[#hex]` |
+
+---
+
+## 🛠️ Tech Stack
+
+| Tech | Purpose |
+|---|---|
+| [React](https://reactjs.org/) | UI library |
+| [Tailwind CSS v4](https://tailwindcss.com/) | Utility-first styling |
+| [Vite](https://vitejs.dev/) | Build tool & dev server |
+| [Remix Icons](https://remixicon.com/) | Icon library |
+| [Google Fonts](https://fonts.google.com/) | Fira Code font |
+
+---
+
+## 📦 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/anjumhere/customer-segmentation-tailwind.git
+
+# Navigate into the project
+cd tailwind-project
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+---
+
+## 👨‍💻 Author
+
+**Adnan Anjum**
+GitHub: [@anjumhere](https://github.com/anjumhere)
+
+---
+
+> Built while learning React and Tailwind CSS from scratch. 🚀

@@ -1,0 +1,7 @@
+@import "tailwindcss";
+html,
+/* Global CSS */
+html, body, #root {
+  height: 100%;
+  margin: 0; /* Removes default browser spacing */
+}

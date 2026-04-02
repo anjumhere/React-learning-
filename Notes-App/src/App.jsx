@@ -12,7 +12,11 @@ const App = () => {
     setTitle("");
     setDetails("");
   };
-
+  const deleteNote = (index) => {
+    const copyTask = [...notes];
+    copyTask.splice(index, 1);
+    setNotes(copyTask);
+  };
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row bg-[#0f0f13] font-sans">
       {/* Left - Form */}
@@ -57,17 +61,25 @@ const App = () => {
           {notes.map((note, index) => (
             <div
               key={index}
-              className="bg-[#1a1a26] border border-[#2a2a3e] rounded-xl p-4 w-[calc(50%-0.375rem)]"
+              className="bg-[#1a1a26] border border-[#2a2a3e] rounded-xl p-3 w-[calc(40%-0.375rem)] flex flex-col justify-center items-center"
             >
-              <p className="text-[#7c6af7] text-[10px] uppercase tracking-widest font-medium mb-1">
+              <p className="text-[#7c6af7] text-[20px] text-center uppercase tracking-widest font-medium mb-1">
                 note
               </p>
-              <h3 className="text-white font-semibold text-sm mb-1">
+              <h3 className="text-white font-semibold text-lg mb-1">
                 {note.title}
               </h3>
-              <p className="text-[#666680] text-xs leading-relaxed">
+              <p className="text-[#666680] text-sm leading-relaxed">
                 {note.details}
               </p>
+              <button
+                onClick={() => {
+                  deleteNote(index);
+                }}
+                className="bg-[#7c6af7] text-white  px-9 py-1 rounded-lg mt-6"
+              >
+                Delete
+              </button>
             </div>
           ))}
         </div>

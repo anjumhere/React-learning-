@@ -14,9 +14,6 @@ const Cards = ({ loading, error, index, setIndex, userData }) => {
         </p>
       )}
 
-      <h1 className="   text-white text-5xl absolute top-4/5 left-[90%] bg-gray-900 px-8 py-2 rounded-lg border-2 border-green-500">
-        {index}
-      </h1>
       <div className="flex flex-wrap gap-5">
         {userData.map((elem, idx) => (
           <div key={elem.id} className="text-white ">
@@ -49,15 +46,16 @@ const Cards = ({ loading, error, index, setIndex, userData }) => {
               setIndex(index - 1);
             }
           }}
-          className="bg-amber-400  text-black rounded-lg px-10 py-2 font-semibold"
+          className="bg-amber-400  text-black rounded-lg px-10 py-2 font-semibold active:scale-95"
         >
           Prev
         </button>
+        <h2 className="text-white text-lg">Page {index}</h2>
         <button
           onClick={() => {
             setIndex(index + 1);
           }}
-          className="bg-amber-400   text-black rounded-lg px-10 py-2 font-semibold"
+          className="bg-amber-400   text-black rounded-lg px-10 py-2 font-semibold active:scale-95"
         >
           Next
         </button>
